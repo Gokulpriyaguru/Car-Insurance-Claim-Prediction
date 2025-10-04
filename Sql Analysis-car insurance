@@ -1,0 +1,10 @@
+-- Total claims by vehicle age
+SELECT Vehicle_Age, COUNT(*) AS Total_Claims
+FROM car_insurance
+WHERE Claim = 1
+GROUP BY Vehicle_Age;
+
+-- Average premium by claim status
+SELECT Claim, AVG(Annual_Premium) AS Avg_Premium
+FROM car_insurance
+GROUP BY Claim;
